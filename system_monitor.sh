@@ -7,13 +7,11 @@ echo "--------------------"
 echo "Time:"
 date
 
-echo ""
 echo "CPU Load:"
-uptime
+top -bn1 | grep "load average"
 
-echo ""
 echo "Memory Usage:"
-vm_stat | head -10
+free -m
 
 echo ""
 echo "Disk Usage:"
@@ -26,7 +24,7 @@ uptime
 
 echo ""
 echo "Memory Usage:"
-vm_stat
+free -m
 
 echo ""
 echo "Disk Usage:"
